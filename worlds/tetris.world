@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+
+		<!-- Camera pose -->
+    <gui>
+			<camera name="gzclient_camera">
+				<pose>0.78 -6.20 3.74 0 0 1.57</pose>
+			</camera>
+    </gui>
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+	    <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+		<!-- A straight tetromino -->
+		<include>
+			<uri>model://straight_tetromino</uri>
+			<pose>0.5 0.5 0.5 0 0 0</pose>
+		</include>
+
+		<!-- keep barebones scene -->
+    <scene>
+      <shadows>1</shadows>
+			<grid>true</grid>
+			<origin_visual>true</origin_visual>
+    </scene>
+
+  </world>
+</sdf>

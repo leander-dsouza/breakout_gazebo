@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="straight_tetromino">
+		<static>true</static>
+
+    <link name="link0">
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.083333</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyy>0.083333</iyy>
+					<iyz>0</iyz>
+					<izz>0.083333</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+					<box>
+						<size>1.0 1.0 1.0</size>
+					</box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+					<box>
+						<size>1.0 1.0 1.0</size>
+					</box>
+        </geometry>
+				<material>
+					<!-- Set to green -->
+          <ambient>0 1 0 1</ambient>
+					<diffuse>1 1 1 1</diffuse>
+					<specular>0 0 0 1</specular>
+					<emissive>0 0.1 0 1</emissive>
+        </material>
+      </visual>
+    </link>
+
+		<link name="link1">
+			<pose>0 0 1 0 0 0</pose>
+			<inertial>
+				<pose>0 0 0 0 0 0</pose>
+				<mass>1.0</mass>
+				<inertia>
+					<ixx>0.083333</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyy>0.083333</iyy>
+					<iyz>0</iyz>
+					<izz>0.083333</izz>
+				</inertia>
+			</inertial>
+
+			<collision name="collision">
+				<pose>0 0 0 0 0 0</pose>
+				<geometry>
+					<box>
+						<size>1.0 1.0 1.0</size>
+					</box>
+				</geometry>
+			</collision>
+
+			<visual name="visual">
+				<pose>0 0 0 0 0 0</pose>
+				<geometry>
+					<box>
+						<size>1.0 1.0 1.0</size>
+					</box>
+				</geometry>
+				<material>
+					<!-- Set to green -->
+					<ambient>0 1 0 1</ambient>
+					<diffuse>1 1 1 1</diffuse>
+					<specular>0 0 0 1</specular>
+					<emissive>0 0.1 0 1</emissive>
+				</material>
+			</visual>
+		</link>
+
+		<joint name="joint0" type="fixed">
+			<parent>link0</parent>
+			<child>link1</child>
+		</joint>
+
+
+  </model>
+</sdf>
