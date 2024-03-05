@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+    <model name="boundary">
+			<static>true</static>
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+							<size>10.0 10.0 2.0</size>
+						</box>
+          </geometry>
+
+          <surface>
+
+            <bounce>
+              <restitution_coefficient>2.0</restitution_coefficient>
+              <threshold>0</threshold>
+            </bounce>
+
+						<friction>
+							<ode>
+								<mu>0.0</mu>
+								<mu2>0.0</mu2>
+							</ode>
+						</friction>
+
+            <contact>
+              <ode>
+                <max_vel>999</max_vel>
+              </ode>
+            </contact>
+
+          </surface>
+
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+							<size>10.0 10.0 2.0</size>
+						</box>
+          </geometry>
+
+					<material>
+						<ambient>1.0 0.0 0.0 1</ambient>
+						<diffuse>1.0 0.0 0.0 1</diffuse>
+						<specular>0.1 0.1 0.1 1</specular>
+					</material>
+        </visual>
+
+      </link>
+
+    </model>
+</sdf>

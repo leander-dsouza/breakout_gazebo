@@ -21,11 +21,32 @@
       <pose>0 0 0 0 0 0</pose>
     </include>
 
-		<!-- A straight tetromino -->
+    <physics type="ode">
+        <friction>
+            <ode>
+                <mu>0.0</mu>
+            </ode>
+        </friction>
+
+        <gravity>0 0 0</gravity>
+        <air_resistance>0</air_resistance>
+
+        <max_step_size>0.001</max_step_size>
+    </physics>
+
+
+		<!-- A bouncy ball -->
 		<include>
-			<uri>model://straight_tetromino</uri>
-			<pose>0.5 0.5 0.5 0 0 0</pose>
+			<uri>model://bouncy_ball</uri>
+			<pose>0 0 5 0 0 0</pose>
 		</include>
+
+		<!-- A boundary -->
+		<include>
+			<uri>model://boundary</uri>
+			<pose>0 0 10 0 0 0</pose>
+		</include>
+
 
 		<!-- keep barebones scene -->
     <scene>
@@ -33,6 +54,8 @@
 			<grid>true</grid>
 			<origin_visual>true</origin_visual>
     </scene>
+
+		<!-- <plugin name="tetrisGazeboPlugin" filename="libtetrisGazeboPlugin.so"/> -->
 
   </world>
 </sdf>
