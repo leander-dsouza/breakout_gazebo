@@ -2,12 +2,12 @@
 <sdf version="1.5">
     <model name="boundary">
 			<static>true</static>
-      <link name="link">
+      <link name="bottom_link">
 
         <collision name="collision">
           <geometry>
             <box>
-							<size>10.0 10.0 2.0</size>
+							<size>20.0 0.5 0.5</size>
 						</box>
           </geometry>
 
@@ -38,18 +38,125 @@
         <visual name="visual">
           <geometry>
             <box>
-							<size>10.0 10.0 2.0</size>
+							<size>20.0 0.5 0.5</size>
 						</box>
           </geometry>
 
 					<material>
-						<ambient>1.0 0.0 0.0 1</ambient>
-						<diffuse>1.0 0.0 0.0 1</diffuse>
-						<specular>0.1 0.1 0.1 1</specular>
+						<ambient>1.0 1.0 1.0 1</ambient>
+						<diffuse>1.0 1.0 1.0 1</diffuse>
+						<specular>1.0 1.0 1.0 1</specular>
 					</material>
         </visual>
 
       </link>
+
+
+			<link name="left_link">
+				<pose>-9.75 0 -20 0 1.5707 0</pose>
+
+				<collision name="collision">
+					<geometry>
+						<box>
+							<size>40.0 0.5 0.5</size>
+						</box>
+					</geometry>
+
+					<surface>
+
+						<bounce>
+							<restitution_coefficient>1.0</restitution_coefficient>
+							<threshold>0</threshold>
+						</bounce>
+
+						<friction>
+							<ode>
+								<mu>0.0</mu>
+								<mu2>0.0</mu2>
+							</ode>
+						</friction>
+
+						<contact>
+							<ode>
+								<max_vel>999</max_vel>
+							</ode>
+						</contact>
+
+					</surface>
+
+				</collision>
+
+				<visual name="visual">
+					<geometry>
+						<box>
+							<size>40.0 0.5 0.5</size>
+						</box>
+					</geometry>
+
+					<material>
+						<ambient>1.0 1.0 1.0 1</ambient>
+						<diffuse>1.0 1.0 1.0 1</diffuse>
+						<specular>1.0 1.0 1.0 1</specular>
+					</material>
+
+				</visual>
+			</link>
+
+
+			<link name="right_link">
+				<pose>9.75 0 -20 0 1.5707 0</pose>
+
+				<collision name="collision">
+					<geometry>
+						<box>
+							<size>40.0 0.5 0.5</size>
+						</box>
+					</geometry>
+
+					<surface>
+
+						<bounce>
+							<restitution_coefficient>1.0</restitution_coefficient>
+							<threshold>0</threshold>
+						</bounce>
+
+						<friction>
+							<ode>
+								<mu>0.0</mu>
+								<mu2>0.0</mu2>
+							</ode>
+						</friction>
+
+						<contact>
+							<ode>
+								<max_vel>999</max_vel>
+							</ode>
+						</contact>
+
+					</surface>
+
+				</collision>
+
+				<visual name="visual">
+					<geometry>
+						<box>
+							<size>40.0 0.5 0.5</size>
+						</box>
+					</geometry>
+
+					<material>
+						<ambient>1.0 1.0 1.0 1</ambient>
+						<diffuse>1.0 1.0 1.0 1</diffuse>
+						<specular>1.0 1.0 1.0 1</specular>
+					</material>
+
+				</visual>
+			</link>
+
+
+
+
+
 
     </model>
 </sdf>

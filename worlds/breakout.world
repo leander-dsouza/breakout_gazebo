@@ -38,21 +38,27 @@
 		<!-- A bouncy ball -->
 		<include>
 			<uri>model://bouncy_ball</uri>
-			<pose>0 0 5 0 0 0</pose>
+			<pose>0 0 10 0 0 0</pose>
 		</include>
 
 		<!-- A boundary -->
 		<include>
 			<uri>model://boundary</uri>
-			<pose>0 0 10 0 0 0</pose>
+			<pose>0 0 30 0 0 0</pose>
+		</include>
+
+		<!-- A paddle -->
+		<include>
+			<uri>model://paddle</uri>
+			<pose>0 0 3 0 0 0</pose>
 		</include>
 
 
 		<!-- keep barebones scene -->
     <scene>
-      <shadows>1</shadows>
-			<grid>true</grid>
-			<origin_visual>true</origin_visual>
+      <shadows>0</shadows>
+			<grid>false</grid>
+			<origin_visual>false</origin_visual>
     </scene>
 
 		<!-- <plugin name="tetrisGazeboPlugin" filename="libtetrisGazeboPlugin.so"/> -->
